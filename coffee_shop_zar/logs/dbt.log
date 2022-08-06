@@ -13,3 +13,215 @@
 [0m18:22:22.409783 [debug] [MainThread]: On debug: select 1 as id
 [0m18:22:23.315453 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69c4881970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69c2cc8790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f69c2cc8310>]}
 [0m18:22:23.823137 [debug] [MainThread]: Connection 'debug' was properly closed.
+
+
+============================== 2022-08-06 18:24:30.024203 | 6178e7a8-7a6b-4333-a3f1-3f448f3ff4a5 ==============================
+[0m18:24:30.024234 [info ] [MainThread]: Running with dbt=1.2.0
+[0m18:24:30.025119 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/vscode/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m18:24:30.025702 [debug] [MainThread]: Tracking: tracking
+[0m18:24:30.031190 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad27a06d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad27a0610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad27a0970>]}
+[0m18:24:30.050016 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
+[0m18:24:30.050647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '6178e7a8-7a6b-4333-a3f1-3f448f3ff4a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad2771ac0>]}
+[0m18:24:30.079109 [debug] [MainThread]: Parsing macros/etc.sql
+[0m18:24:30.083337 [debug] [MainThread]: Parsing macros/adapters.sql
+[0m18:24:30.107439 [debug] [MainThread]: Parsing macros/catalog.sql
+[0m18:24:30.113139 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m18:24:30.115817 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m18:24:30.116383 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m18:24:30.116845 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m18:24:30.117440 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m18:24:30.118137 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m18:24:30.118807 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m18:24:30.119530 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m18:24:30.119966 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m18:24:30.121508 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m18:24:30.123441 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m18:24:30.124089 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m18:24:30.125415 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m18:24:30.126013 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m18:24:30.126645 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+[0m18:24:30.129152 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+[0m18:24:30.130855 [debug] [MainThread]: Parsing macros/materializations/table.sql
+[0m18:24:30.136128 [debug] [MainThread]: Parsing macros/materializations/view.sql
+[0m18:24:30.139065 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+[0m18:24:30.154762 [debug] [MainThread]: Parsing macros/materializations/copy.sql
+[0m18:24:30.157585 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+[0m18:24:30.158567 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+[0m18:24:30.159346 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+[0m18:24:30.160227 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+[0m18:24:30.161626 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+[0m18:24:30.164310 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m18:24:30.177750 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+[0m18:24:30.184664 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+[0m18:24:30.198826 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+[0m18:24:30.203256 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+[0m18:24:30.212785 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+[0m18:24:30.215751 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+[0m18:24:30.217951 [debug] [MainThread]: Parsing macros/utils/concat.sql
+[0m18:24:30.219012 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m18:24:30.220130 [debug] [MainThread]: Parsing macros/utils/any_value.sql
+[0m18:24:30.221144 [debug] [MainThread]: Parsing macros/utils/replace.sql
+[0m18:24:30.222443 [debug] [MainThread]: Parsing macros/utils/data_types.sql
+[0m18:24:30.228030 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m18:24:30.228934 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m18:24:30.230206 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m18:24:30.231552 [debug] [MainThread]: Parsing macros/utils/cast_bool_to_text.sql
+[0m18:24:30.232667 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m18:24:30.233837 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m18:24:30.235015 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m18:24:30.235906 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m18:24:30.237982 [debug] [MainThread]: Parsing macros/utils/last_day.sql
+[0m18:24:30.239848 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m18:24:30.242293 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m18:24:30.243469 [debug] [MainThread]: Parsing macros/utils/literal.sql
+[0m18:24:30.244455 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m18:24:30.245781 [debug] [MainThread]: Parsing macros/utils/length.sql
+[0m18:24:30.246821 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m18:24:30.247958 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m18:24:30.249076 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+[0m18:24:30.257673 [debug] [MainThread]: Parsing macros/etc/statement.sql
+[0m18:24:30.263019 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+[0m18:24:30.265351 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+[0m18:24:30.269148 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+[0m18:24:30.274656 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+[0m18:24:30.277526 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+[0m18:24:30.293226 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+[0m18:24:30.297662 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+[0m18:24:30.312640 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+[0m18:24:30.314216 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+[0m18:24:30.324279 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+[0m18:24:30.325682 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+[0m18:24:30.331094 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+[0m18:24:30.334534 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+[0m18:24:30.336866 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+[0m18:24:30.341332 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+[0m18:24:30.343200 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+[0m18:24:30.345007 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+[0m18:24:30.362489 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+[0m18:24:30.369470 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+[0m18:24:30.381639 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+[0m18:24:30.383404 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+[0m18:24:30.394647 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+[0m18:24:30.411130 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+[0m18:24:30.412770 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+[0m18:24:30.414417 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+[0m18:24:30.416888 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+[0m18:24:30.728473 [debug] [MainThread]: 1699: static parser successfully parsed customers.sql
+[0m18:24:30.749143 [debug] [MainThread]: 1699: static parser successfully parsed monthly_users.sql
+[0m18:24:30.780994 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.coffee_shop_zar.example
+
+[0m18:24:30.787003 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6178e7a8-7a6b-4333-a3f1-3f448f3ff4a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad21b40d0>]}
+[0m18:24:30.792640 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6178e7a8-7a6b-4333-a3f1-3f448f3ff4a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad27a06d0>]}
+[0m18:24:30.792971 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 285 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m18:24:30.793299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6178e7a8-7a6b-4333-a3f1-3f448f3ff4a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad2204a00>]}
+[0m18:24:30.794729 [info ] [MainThread]: 
+[0m18:24:30.795798 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m18:24:30.797649 [debug] [ThreadPool]: Acquiring new bigquery connection "list_aec-students"
+[0m18:24:30.798129 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:24:32.017882 [debug] [ThreadPool]: Acquiring new bigquery connection "list_aec-students_dbt_lauren"
+[0m18:24:32.018483 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:24:32.286718 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6178e7a8-7a6b-4333-a3f1-3f448f3ff4a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad21b4f70>]}
+[0m18:24:32.287425 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m18:24:32.287831 [info ] [MainThread]: 
+[0m18:24:32.292980 [debug] [Thread-1  ]: Began running node model.coffee_shop_zar.customers
+[0m18:24:32.293363 [info ] [Thread-1  ]: 1 of 2 START table model dbt_lauren.customers .................................. [RUN]
+[0m18:24:32.294077 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.coffee_shop_zar.customers"
+[0m18:24:32.294386 [debug] [Thread-1  ]: Began compiling node model.coffee_shop_zar.customers
+[0m18:24:32.294623 [debug] [Thread-1  ]: Compiling model.coffee_shop_zar.customers
+[0m18:24:32.298535 [debug] [Thread-1  ]: Writing injected SQL for node "model.coffee_shop_zar.customers"
+[0m18:24:32.299050 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:24:32.299285 [debug] [Thread-1  ]: Began executing node model.coffee_shop_zar.customers
+[0m18:24:32.315075 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m18:24:32.595287 [debug] [Thread-1  ]: Writing runtime SQL for node "model.coffee_shop_zar.customers"
+[0m18:24:32.595903 [debug] [Thread-1  ]: On model.coffee_shop_zar.customers: /* {"app": "dbt", "dbt_version": "1.2.0", "profile_name": "coffee_shop_zar", "target_name": "dev", "node_id": "model.coffee_shop_zar.customers"} */
+
+
+  create or replace table `aec-students`.`dbt_lauren`.`customers`
+  
+  
+  OPTIONS()
+  as (
+    
+
+
+/*
+For each customer, we want to know how many orders they have placed, and when they placed their first order.
+*/
+
+with 
+    customers as (
+      select * from `analytics-engineers-club.coffee_shop.customers`
+    ),
+
+    orders as (
+      select * from `analytics-engineers-club.coffee_shop.orders`
+    ),
+
+    aggregate_orders as (
+      select customer_id,
+            count(distinct id) as orders,
+            array_agg(created_at order by created_at asc limit 1)[safe_offset(0)] as first_order_at
+      from orders
+      group by customer_id
+    ),
+
+    final as (
+
+      select customers.*,
+            ifnull(aggregate_orders.orders,0) as orders,
+            aggregate_orders.first_order_at
+      from customers 
+      left join aggregate_orders on 
+        customers.id = aggregate_orders.customer_id
+
+    )
+
+    select *
+    from final
+    order by first_order_at
+  );
+  
+[0m18:24:37.846964 [debug] [Thread-1  ]: finished collecting timing info
+[0m18:24:37.847840 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6178e7a8-7a6b-4333-a3f1-3f448f3ff4a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad214ab20>]}
+[0m18:24:37.848518 [info ] [Thread-1  ]: 1 of 2 OK created table model dbt_lauren.customers ............................. [[32mCREATE TABLE (174.4k rows, 28.2 MB processed)[0m in 5.55s]
+[0m18:24:37.849330 [debug] [Thread-1  ]: Finished running node model.coffee_shop_zar.customers
+[0m18:24:37.850558 [debug] [Thread-3  ]: Began running node model.coffee_shop_zar.monthly_users
+[0m18:24:37.850987 [info ] [Thread-3  ]: 2 of 2 START view model dbt_lauren.monthly_users ............................... [RUN]
+[0m18:24:37.852222 [debug] [Thread-3  ]: Acquiring new bigquery connection "model.coffee_shop_zar.monthly_users"
+[0m18:24:37.852537 [debug] [Thread-3  ]: Began compiling node model.coffee_shop_zar.monthly_users
+[0m18:24:37.852827 [debug] [Thread-3  ]: Compiling model.coffee_shop_zar.monthly_users
+[0m18:24:37.857371 [debug] [Thread-3  ]: Writing injected SQL for node "model.coffee_shop_zar.monthly_users"
+[0m18:24:37.857838 [debug] [Thread-3  ]: finished collecting timing info
+[0m18:24:37.858126 [debug] [Thread-3  ]: Began executing node model.coffee_shop_zar.monthly_users
+[0m18:24:37.883875 [debug] [Thread-3  ]: Writing runtime SQL for node "model.coffee_shop_zar.monthly_users"
+[0m18:24:37.884387 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m18:24:37.884642 [debug] [Thread-3  ]: On model.coffee_shop_zar.monthly_users: /* {"app": "dbt", "dbt_version": "1.2.0", "profile_name": "coffee_shop_zar", "target_name": "dev", "node_id": "model.coffee_shop_zar.monthly_users"} */
+
+
+  create or replace view `aec-students`.`dbt_lauren`.`monthly_users`
+  OPTIONS()
+  as select
+    date_trunc(first_order_at, month) as signup_month,
+    count(*) as new_customers
+from `aec-students`.`dbt_lauren`.`customers`
+group by 
+    signup_month;
+
+
+[0m18:24:38.585508 [debug] [Thread-3  ]: finished collecting timing info
+[0m18:24:38.586048 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6178e7a8-7a6b-4333-a3f1-3f448f3ff4a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad0125ee0>]}
+[0m18:24:38.586488 [info ] [Thread-3  ]: 2 of 2 OK created view model dbt_lauren.monthly_users .......................... [[32mOK[0m in 0.73s]
+[0m18:24:38.587023 [debug] [Thread-3  ]: Finished running node model.coffee_shop_zar.monthly_users
+[0m18:24:38.588661 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m18:24:38.589659 [info ] [MainThread]: 
+[0m18:24:38.590072 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 7.79 seconds (7.79s).
+[0m18:24:38.590533 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:24:38.590828 [debug] [MainThread]: Connection 'model.coffee_shop_zar.customers' was properly closed.
+[0m18:24:38.591011 [debug] [MainThread]: Connection 'model.coffee_shop_zar.monthly_users' was properly closed.
+[0m18:24:38.638734 [info ] [MainThread]: 
+[0m18:24:38.639105 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:24:38.639642 [info ] [MainThread]: 
+[0m18:24:38.640058 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m18:24:38.640768 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad264ce80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad5a3f610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad5a30a30>]}
