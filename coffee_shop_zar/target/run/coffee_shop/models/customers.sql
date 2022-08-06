@@ -1,6 +1,8 @@
 
 
-/*
+  create or replace view `aec-students`.`dbt_lauren`.`customers`
+  OPTIONS()
+  as /*
 For each customer, we want to know how many orders they have placed, and when they placed their first order.
 */
 
@@ -24,7 +26,8 @@ with
     final as (
 
       select customers.*,
-            aggregate_orders.* except(customer_id)
+            ifnull(aggregate_orders.orders,0) as orders,
+            aggregate_orders.first_order_at
       from customers 
       left join aggregate_orders on 
         customers.id = aggregate_orders.customer_id
@@ -33,4 +36,5 @@ with
 
     select *
     from final
-    order by first_order_at
+    order by first_order_at;
+
