@@ -1,3 +1,5 @@
 coffee_shop_zar/logs/
 coffee_shop_zar/target/
 coffee_shop_zar/dbt_modules/
+coffee_shop_zar/target/partial_parse.msgpack
+coffee_shop_zar/target/run_results.json
