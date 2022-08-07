@@ -10,11 +10,11 @@ For each customer, we want to know how many orders they have placed, and when th
 
 with 
     customers as (
-      select * from `analytics-engineers-club.coffee_shop.customers`
+      select * from {{ source('coffee_shop', 'customers') }}
     ),
 
     orders as (
-      select * from `analytics-engineers-club.coffee_shop.orders`
+      select * from {{ source('coffee_shop', 'orders') }}
     ),
 
     aggregate_orders as (

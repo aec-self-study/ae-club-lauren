@@ -1,0 +1,65 @@
+version: 2
+
+sources:
+  - name: coffee_shop
+    database: analytics-engineers-club
+    schema: coffee_shop
+
+    # meta fields are rendered in auto-generated documentation
+    meta:
+      contains_pii: true
+      owner: "@zar"
+
+    # Add tags to this source
+    tags:
+      - pii
+
+    quoting:
+      database: true
+      schema: true
+      identifier: true
+
+    tables:
+      - name: customers
+        description: '{{ doc("customers") }}'
+        
+        columns:
+          - name: id
+            tests:
+              - unique
+          - name: email
+            tests:
+              - not_null
+
+
+      - name: orders
+        columns:
+          - name: id
+            tests:
+              - unique
+
+          # - name: customer_id
+          #   tests:
+          #     - relationships:
+          #       to: ref('customers')
+          #       field: id
+
+          - name: state
+            tests:
+              - accepted_values:
+                  values: ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming']
+
+      - name: product_prices
+        description: '{{ doc("customers") }}'
+        
+        columns:
+          - name: id
+            tests:
+              - unique
+          - name: price
+            tests:
+              - not_null
+              - dbt_utils.accepted_range:
+                  min_value: 0
+                  inclusive: false
+                  where: "price > 0"
