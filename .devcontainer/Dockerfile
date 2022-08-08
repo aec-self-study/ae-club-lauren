@@ -11,6 +11,39 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 # gcloud installation
 RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | tee /usr/share/keyrings/cloud.google.gpg && apt-get update -y && apt-get install google-cloud-sdk -y
 
+# install pyenv
+RUN apt-get update -y \
+    && apt-get install -y \
+        make \
+        build-essential \
+        libssl-dev \
+        zlib1g-dev \
+        libbz2-dev \
+        libreadline-dev \
+        libsqlite3-dev \
+        wget \
+        curl \
+        llvm \
+        libncurses5-dev \
+        libncursesw5-dev \
+        xz-utils \
+        tk-dev \
+        libffi-dev \
+        liblzma-dev \
+        python-openssl \
+        git \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN curl https://pyenv.run | bash
+
+ENV PYENV_ROOT "/pyenv"
+ENV PATH "$PYENV_ROOT/bin:$PATH"
+
+
+
+RUN eval "$(pyenv init -)"
+
+
 # add dotfiles
 RUN git clone https://github.com/apiary-cc/aec-dotfiles /home/vscode/temp
 RUN chmod a=rw -R /home/vscode/temp

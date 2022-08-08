@@ -38,12 +38,6 @@ sources:
             tests:
               - unique
 
-          # - name: customer_id
-          #   tests:
-          #     - relationships:
-          #       to: ref('customers')
-          #       field: id
-
           - name: state
             tests:
               - accepted_values:
@@ -63,3 +57,23 @@ sources:
                   min_value: 0
                   inclusive: false
                   where: "price > 0"
+
+      - name: order_items
+        description: For each unique order, lists the products that were sold in that order.
+        
+        columns:
+          - name: id
+            tests:
+              - unique
+          - name: order_id
+            tests:
+              - not_null
+
+
+      - name: products
+        description: List of available products for sale.
+        
+        columns:
+          - name: id
+            tests:
+              - unique
