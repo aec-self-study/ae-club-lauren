@@ -19,7 +19,7 @@ with
 
     aggregate_orders as (
       select customer_id,
-            count(distinct id) as orders,
+            count(distinct id) as total_orders,
             array_agg(created_at order by created_at asc limit 1)[safe_offset(0)] as first_order_at
       from orders
       group by customer_id
@@ -28,7 +28,7 @@ with
     final as (
 
       select customers.*,
-            ifnull(aggregate_orders.orders,0) as orders,
+            ifnull(aggregate_orders.total_orders,0) as total_orders,
             aggregate_orders.first_order_at
       from customers 
       left join aggregate_orders on 

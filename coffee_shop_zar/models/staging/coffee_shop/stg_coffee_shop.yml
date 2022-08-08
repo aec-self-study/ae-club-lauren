@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: stg_coffee_shop__products
+    description: "Products available by name, category and date available on."
+    columns:
+      - name: id
+        description: "Unique product ID"
+
+      - name: name
+        description: "Name of the product."
+
+      - name: category
+        description: "Category of the product."
+
+      - name: product_available_on
+        description: "Date product first became available for purchase."
+  
+  - name: stg_coffee_shop__product_prices
+    description: ""
+    columns:
+      - name: id
+        description: "Unique ID of table"
+
+      - name: product_id
+        description: "Unique ID for product."
+
+      - name: price_usd
+        description: "Price of the product in USD."
+
+      - name: price_started_at
+        description: "Timestamp the product price started at."
+
+      - name: price_ended_at
+        description: "Timestamp the product price ended at."
+
+      - name: is_row_active
+        description: "Boolean to flag if the current product price is the active price or not."
+
+  - name: stg_coffee_shop__orders
+    description: ""
+    columns:
+      - name: id
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: created_on
+        description: ""
+
+      - name: customer_id
+        description: ""
+
+      - name: total_amount_usd
+        description: ""
+
+      - name: state
+        description: ""
+
+      - name: address
+        description: ""
+
+      - name: zip
+        description: ""
