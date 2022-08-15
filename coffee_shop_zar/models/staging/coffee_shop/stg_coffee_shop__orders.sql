@@ -12,7 +12,7 @@ with
             date(created_at) as created_on,
             extract(year from date(created_at)) as year_of,
             date_trunc(date(created_at), month) as month_of,
-            date_trunc(date(created_at), week(MONDAY)) as week_of,
+            date_trunc(date(created_at), week) as week_of,
             case extract(dayofweek from date(created_at)) 
                 when 1 then "Sunday"
                 when 2 then "Monday"

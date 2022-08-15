@@ -36,3 +36,16 @@ models:
     # Config indicated by + and applies to all files under models/example/
     customers:
       +materialized: table
+
+
+vars:
+  # LTV cohort start date
+  start_date: date('2020-12-27')
+  # LTV cohort end date
+  end_date: date('2021-10-01')
+
+  github_source:
+    github_database: analytics-engineers-club
+    github_schema: github
+  
+  github__using_repo_team: false # by default this is assumed to be true

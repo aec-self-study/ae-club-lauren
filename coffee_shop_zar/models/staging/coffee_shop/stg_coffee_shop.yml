@@ -36,6 +36,14 @@ models:
 
       - name: is_row_active
         description: "Boolean to flag if the current product price is the active price or not."
+    # test that price ranges do not overlap
+    tests:
+      - dbt_utils.mutually_exclusive_ranges:
+          lower_bound_column: price_started_at
+          upper_bound_column: price_ended_at
+          partition_by: product_id
+          gaps: not_allowed
+
 
   - name: stg_coffee_shop__orders
     description: ""
@@ -63,3 +71,4 @@ models:
 
       - name: zip
         description: ""
+
