@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: web_tracking
+    database: analytics-engineers-club
+    schema: web_tracking
+
+    # meta fields are rendered in auto-generated documentation
+    meta:
+      contains_pii: true
+      owner: "@zar"
+
+    # Add tags to this source
+    tags:
+      - web-analytics
+
+    quoting:
+      database: true
+      schema: true
+      identifier: true
+
+    tables:
+      - name: pageviews
+        description: "Pageviews for our website"
+        
+        columns:
+          - name: id
+            tests:
+              - unique
+
