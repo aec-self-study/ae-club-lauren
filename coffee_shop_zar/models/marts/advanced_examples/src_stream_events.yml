@@ -1,0 +1,8 @@
+version: 2
+ 
+sources:
+  - name: advanced_dbt_examples
+    project: analytics-engineers-club
+    tables:
+      - name: form_events
+      - name: favorite_ice_cream_flavors
